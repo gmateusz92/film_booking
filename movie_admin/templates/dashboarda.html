@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for movie in movies %}
+
+
+<center>
+<pre>
+<a href="{{ movie.get_url }}" class="btn btn-block btn-primary">{{ movie.m_name }} </a>
+</pre>
+</center>
+
+
+{% endfor %}
+
+{% endblock %}

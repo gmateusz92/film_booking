@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for movie in movies %}
+
+
+<center>
+<pre>
+<a href="{{movie.get_url}}}" class="btn btn-block btn-primary">{{ movie.m_name }} </a>
+    <a href="{% url 'user_side:selectseats' movie.pk %}"><img src="{{movie.m_name.url}}" alt="" style="height: 350px; width: 270px; border: 5px solid #555;"></a>&nbsp;&nbsp;&nbsp
+</pre>
+</center>
+
+
+{% endfor %}
+
+{% endblock %}
